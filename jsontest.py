@@ -10,13 +10,15 @@ class JsonTest(type):
 
         # Loop them and create class methods to call the jsontest_function
         for filename in files:
-            test_name = 'test_{0}'.format(filename[:-5])
+            test_name = filename[:-5]
             test_data = json.loads(open(path.join(cls.jsontest_files, filename)).read())
 
             # We have to define a local method, lambda doesn't seem to work with nose
             def test(self):
-                self.jsontest_function(test_data)
+                self.jsontest_function(test_name, test_data)
 
-            setattr(cls, test_name, test)
+            # Attach the method
+            method_name = 'test_{0}'.format(test_name)
+            setattr(cls, method_name, test)
 
         return super(JsonTest, cls).__init__(*args, **kwargs)
