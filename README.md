@@ -15,7 +15,7 @@ class MyTests(TestCase):
     jsontest_files = path.join('tests', 'filters')
 
     # Define a function to run against each file
-    def jsontest_function(self, test_data):
-        print test_data
+    def jsontest_function(self, test_name, test_data):
+        print test_name, test_data
         self.assertFalse(False)
 ```
