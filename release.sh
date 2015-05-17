@@ -1,0 +1,12 @@
+#!/bin/sh
+
+VERSION=`python setup.py --version`
+
+echo "Doing git..."
+git tag -a v$VERSION -m v$VERSION
+git push --tags
+
+echo "Doing pypi..."
+python setup.py sdist upload
+
+echo "Done!"
