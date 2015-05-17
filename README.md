@@ -1,6 +1,6 @@
 # JsonTest
 
-`JsonTest` is a tiny metaclass designed for automatically generating tests based off JSON files. Originally built for testing [`ElasticQuery`](https://github.com/Fizzadar/ElasticQuery).
+`JsonTest` is a tiny metaclass designed for automatically generating tests based off JSON files. Originally built for testing [`ElasticQuery`](https://github.com/Fizzadar/ElasticQuery). Install with `pip install jsontest`.
 
 ## Synopsis
 
