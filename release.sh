@@ -6,7 +6,8 @@ echo "Doing git..."
 git tag -a v$VERSION -m v$VERSION
 git push --tags
 
-echo "Doing pypi..."
-python setup.py sdist upload
+echo "Building packages..."
+rm -f dist/*
+python setup.py sdist bdist_wheel
 
 echo "Done!"
