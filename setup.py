@@ -9,11 +9,11 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    version='1.2',
+    version='1.3',
     name='JsonTest',
     description='A tiny metaclass for autogenerating tests from JSON files',
     author='Nick Barrett',
     author_email='pointlessrambler@gmail.com',
     url='http://github.com/Fizzadar/JsonTest',
-    py_modules=['jsontest']
+    py_modules=['jsontest'],
 )
