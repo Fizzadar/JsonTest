@@ -9,7 +9,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    version='1.3',
+    version='1.4',
     name='JsonTest',
     description='A tiny metaclass for autogenerating tests from JSON files',
     author='Nick Barrett',

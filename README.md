@@ -14,8 +14,11 @@ class MyTests(TestCase):
     # Tell JsonTest where to find our JSON files
     jsontest_files = path.join('tests', 'filters')
 
+    # Optional prefix for the test names
+    jsontest_prefix = 'test_'
+
     # Define a function to run against each file
     def jsontest_function(self, test_name, test_data):
-        print test_name, test_data
+        print(test_name, test_data)
         self.assertFalse(False)
 ```
